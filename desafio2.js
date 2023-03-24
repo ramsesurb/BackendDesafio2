@@ -1,6 +1,6 @@
 const { promises: fs } = require("fs");
 
-class Contenedor {
+class ProductManager {
   async getProducts() {
     try {
       const content = JSON.parse(
@@ -99,7 +99,7 @@ class Contenedor {
   }
 }
 
-const rute = new Contenedor("productos.json");
+const rute = new ProductManager("productos.json");
 
 rute.getProducts();
 
